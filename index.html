@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blacksmith — The Tiny Forge</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -42,10 +41,18 @@
                     <p id="action-message" role="status">Welcome to the forge. Add heat to begin.</p>
                 </div>
             </section>
-            <aside aria-label="Game instructions">
+            <aside aria-label="add-heat">
                 <section class="panel">
-                    <h2>Console commands</h2>
-                    <p>Write each function in <code>script.js</code>, then try it in the browser console.</p>
+                    <h2>Forge Controls</h2>
+                    <form id="notes-form">
+                        <fieldset id="notes-fieldset" disabled>
+                            <label id="note-label" for="note">Add to Heat</label>
+                            <input id="note" name="note" required maxlength="200" autocomplete="off">
+                            <button id="heat" type="submit">Add Heat</button>
+                        </fieldset>
+                        <p class="hint">Add a positive number. Max 100.</p>
+                        <ul id="notes-list" aria-label="Notes for the heat"></ul>
+                    </form>
                     <dl>
                         <dt><code>heatForge(20)</code></dt>
                         <dd>Add 20 heat, up to 100.</dd>
@@ -69,6 +76,7 @@
         </div>
         <footer>Call an action → change the state → update the page.</footer>
     </main>
+    <script src="main.js" defer></script>
 </body>
 
 </html>

@@ -79,6 +79,34 @@ p {
   color: var(--status-ink);
   border-bottom: 1px solid #bdc9c2;
 }
+
+#heat {
+  padding: 1rem 1rem;
+  background: #006341;
+  color: white;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+#note {
+  padding: 0.5rem;
+  color: white;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+form {
+  border: none;
+  padding: 0;
+}
+
+/* #note-label {
+  font-size: 1.25rem;
+  font-weight: bold;
+} */
+
 .forge-top .eyebrow {
   color: inherit;
 }
