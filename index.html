@@ -44,31 +44,15 @@
             <aside aria-label="add-heat">
                 <section class="panel">
                     <h2>Forge Controls</h2>
-                    <form id="notes-form">
-                        <fieldset id="notes-fieldset" disabled>
-                            <label id="note-label" for="note">Heat to Add</label>
-                            <input id="note" name="note" type="number" min="20" max="100" step="1" required>
-                            <button class="dropdown-button">Add Heat</button>
-                            <ul id="dropdown-options" class="dropdown-options">
-                                <li class="dropdown-option">10</li>
-                                <li class="dropdown-option">20</li>
-                                <li class="dropdown-option">30</li>
-                                <li class="dropdown-option">40</li>
-                                <li class="dropdown-option">50</li>
-                                <li class="dropdown-option">60</li>
-                                <li class="dropdown-option">70</li>
-                                <li class="dropdown-option">80</li>
-                                <li class="dropdown-option">90</li>
-                                <li class="dropdown-option">100</li>
-                            </ul>
-                        </fieldset>
-                        <p class="hint">Add a positive number. Max 100.</p>
-                        <ul id="notes-list" aria-label="Notes for the heat"></ul>
-                    </form>
-                    <button id="make-sword" type="submit">Make Sword</button>
-                    <p class="note">Use 30 heat to make one sword.</p>
-                    <button id="reset-forge" type="submit">Reset Forge</button>
-                    <p class="note">Return to 20 heat and 0 swords.</p>
+                    <div class="controls">
+                        <form id="heat-form">
+                            <label id="label-1" aria-label="add-heat" for="heat">Heat to add</label>
+                            <input type="number" id="heat" name="heat" min="0" max="100" step="1" placeholder="20"
+                                required>
+                            <button aria-type="submit" id="add-heat">Add Heat</button>
+                            <p id="enter-number">Enter a positive whole number. Maximum forge heat: 100.</p>
+                        </form>
+                    </div>
                 </section>
                 <section class="panel">
                     <h2>Know your forge</h2>
