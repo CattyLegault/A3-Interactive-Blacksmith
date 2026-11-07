@@ -46,9 +46,21 @@
                     <h2>Forge Controls</h2>
                     <form id="notes-form">
                         <fieldset id="notes-fieldset" disabled>
-                            <label id="note-label" for="note">Add to Heat</label>
-                            <input id="note" name="note" required maxlength="200" autocomplete="off">
-                            <button id="heat" type="submit">Add Heat</button>
+                            <label id="note-label" for="note">Heat to Add</label>
+                            <input id="note" name="note" type="number" min="20" max="100" step="1" required>
+                            <button class="dropdown-button">Add Heat</button>
+                            <ul id="dropdown-options" class="dropdown-options">
+                                <li class="dropdown-option">10</li>
+                                <li class="dropdown-option">20</li>
+                                <li class="dropdown-option">30</li>
+                                <li class="dropdown-option">40</li>
+                                <li class="dropdown-option">50</li>
+                                <li class="dropdown-option">60</li>
+                                <li class="dropdown-option">70</li>
+                                <li class="dropdown-option">80</li>
+                                <li class="dropdown-option">90</li>
+                                <li class="dropdown-option">100</li>
+                            </ul>
                         </fieldset>
                         <p class="hint">Add a positive number. Max 100.</p>
                         <ul id="notes-list" aria-label="Notes for the heat"></ul>

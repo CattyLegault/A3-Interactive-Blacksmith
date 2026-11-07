@@ -80,36 +80,80 @@ p {
   border-bottom: 1px solid #bdc9c2;
 }
 
-#heat,
+.dropdown-button {
+  padding: 0.75rem 0.75rem;
+  background: #006341;
+  color: white;
+  border: 2px solid #006341;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  font-weight: bold;
+  font-size: 1.15rem;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.dropdown-button:hover {
+  background: white;
+  color: #006341;
+}
+
 #make-sword {
-  padding: 1rem 1rem;
+  padding: 1rem;
   background: #006341;
   color: white;
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   font-weight: bold;
   font-size: 1.25rem;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   border: 0;
+  width: 100%;
+  cursor: pointer;
 }
 
-#note {
-  padding: 0.5rem;
-  color: white;
+#make-sword:hover {
+  background: white;
+  color: #006341;
+  border: 2px solid #006341;
+}
+
+form {
+  border: none;
+}
+
+#reset-forge {
+  padding: 1rem 1rem;
+  border: 2px solid #006341;
+  color: #006341;
+  background: white;
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   font-weight: bold;
   font-size: 1.25rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+#reset-forge:hover {
+  background: #006341;
+  color: white;
+}
+
+#note-label {
+  padding: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 form {
   border: none;
   padding: 0;
 }
-
-/* #note-label {
-  font-size: 1.25rem;
-  font-weight: bold;
-} */
 
 .forge-top .eyebrow {
   color: inherit;
