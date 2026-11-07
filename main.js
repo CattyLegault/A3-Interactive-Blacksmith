@@ -110,6 +110,7 @@ makeSwordButton = document.getElementById("make-sword");
 makeSwordButton.addEventListener("click", function () {
   makeSword();
 });
+
 // Make the small changes needed to your existing reset function and input handling.
 // Use real buttons and a labelled input. Ensure any buttons inside a form have the appropriate type so clicks do not unexpectedly reload the page.
 // Show feedback on the webpage, not only in the console or an alert box. Clear or replace outdated feedback after the next action.
