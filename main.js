@@ -95,7 +95,21 @@ function makeSword() {
 resetForge();
 
 // Use addEventListener() for the controls. Do not use inline HTML event attributes such as onclick.
+const addHeatButton = document.getElementById("add-heat");
+addHeatButton.addEventListener("click", function () {
+  const heatInput = document.getElementById("heat-input");
+  const heatAmount = parseInt(heatInput.value);
+  if (!isNaN(heatAmount) && heatAmount > 0) {
+    heatForge(heatAmount);
+  }
+
+  console.log(`Added ${heatAmount} heat to the forge.`);
+});
 // Reuse heatForge(), makeSword(), resetForge(), getForgeStatus(), and updateForge() instead of duplicating the game rules in event handlers.
+makeSwordButton = document.getElementById("make-sword");
+makeSwordButton.addEventListener("click", function () {
+  makeSword();
+});
 // Make the small changes needed to your existing reset function and input handling.
 // Use real buttons and a labelled input. Ensure any buttons inside a form have the appropriate type so clicks do not unexpectedly reload the page.
 // Show feedback on the webpage, not only in the console or an alert box. Clear or replace outdated feedback after the next action.
