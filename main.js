@@ -94,9 +94,10 @@ function makeSword() {
 // 8. Call resetForge() once to start the game.
 resetForge();
 
-const dropdownButton = document.querySelector(".dropdown-button");
-const dropdownOptions = document.querySelector(".dropdown-options");
-dropdownButton.addEventListener("click", () => {
-  dropdownOptions.style.display =
-    dropdownOptions.style.display === "none" ? "block" : "none";
-});
+// Use addEventListener() for the controls. Do not use inline HTML event attributes such as onclick.
+// Reuse heatForge(), makeSword(), resetForge(), getForgeStatus(), and updateForge() instead of duplicating the game rules in event handlers.
+// Make the small changes needed to your existing reset function and input handling.
+// Use real buttons and a labelled input. Ensure any buttons inside a form have the appropriate type so clicks do not unexpectedly reload the page.
+// Show feedback on the webpage, not only in the console or an alert box. Clear or replace outdated feedback after the next action.
+// Keep heat, sword count, status text, status class, and forge image accurate after every action. Keep only one forge status class active at a time.
+// Retain the three supplied forge graphics. Keep controls and feedback readable on narrow and wide screens; a visual redesign is not required.

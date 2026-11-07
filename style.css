@@ -130,6 +130,17 @@ p {
   cursor: pointer;
 }
 
+#make-sword:disabled {
+  background: #e4eaf1;
+  color: #263b50;
+  border: 2px solid #e4eaf1;
+  cursor: not-allowed;
+}
+
+#make-sword p {
+  padding-top: 1.5rem;
+}
+
 #make-sword:hover {
   background: white;
   color: #006341;
