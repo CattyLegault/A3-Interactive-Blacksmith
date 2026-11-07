@@ -80,13 +80,17 @@ p {
   border-bottom: 1px solid #bdc9c2;
 }
 
-#heat {
+#heat,
+#make-sword {
   padding: 1rem 1rem;
   background: #006341;
   color: white;
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   font-weight: bold;
   font-size: 1.25rem;
+  text-decoration: none;
+  display: inline-block;
+  border: 0;
 }
 
 #note {

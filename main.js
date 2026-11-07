@@ -93,3 +93,5 @@ function makeSword() {
 
 // 8. Call resetForge() once to start the game.
 resetForge();
+
+const $noteList = document.getElementById("note-list");
