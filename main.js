@@ -110,13 +110,15 @@ addHeatButton.addEventListener("click", function (event) {
 });
 // Reuse heatForge(), makeSword(), resetForge(), getForgeStatus(), and updateForge() instead of duplicating the game rules in event handlers.
 makeSwordButton = document.getElementById("make-sword");
-makeSwordButton.addEventListener("click", function () {
+makeSwordButton.addEventListener("click", function (event) {
+  event.preventDefault();
   makeSword();
   console.log("Attempted to make a sword.");
 });
 
 const resetForgeButton = document.getElementById("reset-forge");
-resetForgeButton.addEventListener("click", function () {
+resetForgeButton.addEventListener("click", function (event) {
+  event.preventDefault();
   resetForge();
   console.log("Attempted to reset the forge.");
 });
