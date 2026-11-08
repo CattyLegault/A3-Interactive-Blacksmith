@@ -131,10 +131,6 @@ resetbackground = body.style.backgroundColor = "#f5f5f5"; // Reset background co
 function resetBackground() {
   if (heatValue < 30) {
     body.style.backgroundColor = "#d3d3d3"; // Cold forge background color
-    textContent = "The forge is cold. You need more heat to make swords.";
-    forgeImage.setAttribute("src", "assets/forge-cold.svg");
-    forgeImage.setAttribute("alt", "it is cold");
-  } else if (heatValue < 70) {
-    body.style.backgroundColor = "#edb477"; // Ready forge background color
+    forgeImage.classList.add("cold");
   }
 }
