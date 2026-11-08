@@ -109,13 +109,14 @@ addHeatButton.addEventListener("click", function (event) {
   console.log(`Added ${heatAmount} heat to the forge.`);
 });
 // Reuse heatForge(), makeSword(), resetForge(), getForgeStatus(), and updateForge() instead of duplicating the game rules in event handlers.
-makeSwordButton = document.getElementById("make-sword");
+const makeSwordButton = document.getElementById("make-sword");
 makeSwordButton.addEventListener("click", function (event) {
   event.preventDefault();
   makeSword();
   console.log("Attempted to make a sword.");
 });
 
+const body = document.querySelector("body");
 const resetForgeButton = document.getElementById("reset-forge");
 resetForgeButton.addEventListener("click", function (event) {
   event.preventDefault();
@@ -127,9 +128,11 @@ resetForgeButton.addEventListener("click", function (event) {
 });
 
 resetbackground = body.style.backgroundColor = "#f5f5f5"; // Reset background color to default
-
-// Make the small changes needed to your existing reset function and input handling.
-// Use real buttons and a labelled input. Ensure any buttons inside a form have the appropriate type so clicks do not unexpectedly reload the page.
-// Show feedback on the webpage, not only in the console or an alert box. Clear or replace outdated feedback after the next action.
-// Keep heat, sword count, status text, status class, and forge image accurate after every action. Keep only one forge status class active at a time.
-// Retain the three supplied forge graphics. Keep controls and feedback readable on narrow and wide screens; a visual redesign is not required.
+function resetBackground() {
+  if (heatValue < 30) {
+    body.style.backgroundColor = "#d3d3d3"; // Cold forge background color
+    textContent = "The forge is cold. You need more heat to make swords.";
+  } else if (heatValue < 70) {
+    body.style.backgroundColor = "#edb477"; // Ready forge background color
+  }
+}
