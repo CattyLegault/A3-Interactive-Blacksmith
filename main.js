@@ -120,6 +120,9 @@ const resetForgeButton = document.getElementById("reset-forge");
 resetForgeButton.addEventListener("click", function (event) {
   event.preventDefault();
   resetForge();
+  if (heatValue === 20 && swordsMade === 0) {
+    actionMessage.textContent = "The forge has been reset.";
+  }
   console.log("Attempted to reset the forge.");
 });
 
