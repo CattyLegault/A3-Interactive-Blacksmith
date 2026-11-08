@@ -138,10 +138,6 @@ p {
   cursor: not-allowed;
 }
 
-#make-sword p {
-  padding-top: 1.5rem;
-}
-
 #make-sword:hover {
   background: white;
   color: #006341;

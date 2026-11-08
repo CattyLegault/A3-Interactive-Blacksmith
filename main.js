@@ -63,7 +63,6 @@ function updateForge() {
 }
 
 // 5. Write resetForge(). Restore the state, message, and display.
-resetForge();
 function resetForge() {
   heatValue = 20;
   swordsMade = 0;
@@ -96,11 +95,15 @@ resetForge();
 
 // Use addEventListener() for the controls. Do not use inline HTML event attributes such as onclick.
 const addHeatButton = document.getElementById("add-heat");
-addHeatButton.addEventListener("click", function () {
+addHeatButton.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent the form from submitting
   const heatInput = document.getElementById("heat-input");
   const heatAmount = parseInt(heatInput.value);
   if (!isNaN(heatAmount) && heatAmount > 0) {
     heatForge(heatAmount);
+  } else {
+    actionMessage.textContent =
+      "Please enter a valid positive number for heat.";
   }
 
   console.log(`Added ${heatAmount} heat to the forge.`);
@@ -109,6 +112,13 @@ addHeatButton.addEventListener("click", function () {
 makeSwordButton = document.getElementById("make-sword");
 makeSwordButton.addEventListener("click", function () {
   makeSword();
+  console.log("Attempted to make a sword.");
+});
+
+const resetForgeButton = document.getElementById("reset-forge");
+resetForgeButton.addEventListener("click", function () {
+  resetForge();
+  console.log("Attempted to reset the forge.");
 });
 
 // Make the small changes needed to your existing reset function and input handling.
