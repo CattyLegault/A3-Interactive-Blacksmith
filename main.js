@@ -131,6 +131,6 @@ resetbackground = body.style.backgroundColor = "#f5f5f5"; // Reset background co
 function resetBackground() {
   if (heatValue < 30) {
     body.style.backgroundColor = "#d3d3d3"; // Cold forge background color
-    forgeImage.classList.add("cold");
+    return "Cold";
   }
 }
