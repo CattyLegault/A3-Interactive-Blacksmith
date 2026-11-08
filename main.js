@@ -126,6 +126,8 @@ resetForgeButton.addEventListener("click", function (event) {
   console.log("Attempted to reset the forge.");
 });
 
+resetbackground = body.style.backgroundColor = "#f5f5f5"; // Reset background color to default
+
 // Make the small changes needed to your existing reset function and input handling.
 // Use real buttons and a labelled input. Ensure any buttons inside a form have the appropriate type so clicks do not unexpectedly reload the page.
 // Show feedback on the webpage, not only in the console or an alert box. Clear or replace outdated feedback after the next action.
