@@ -95,8 +95,8 @@ resetForge();
 
 // Use addEventListener() for the controls. Do not use inline HTML event attributes such as onclick.
 const addHeatButton = document.getElementById("add-heat");
-addHeatButton.addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent the form from submitting
+addHeatButton.addEventListener("click", function ($event) {
+  $event.preventDefault(); // Prevent the form from submitting
   const heatInput = document.getElementById("heat-input");
   const heatAmount = parseInt(heatInput.value);
   if (!isNaN(heatAmount) && heatAmount > 0) {
@@ -110,20 +110,24 @@ addHeatButton.addEventListener("click", function (event) {
 });
 // Reuse heatForge(), makeSword(), resetForge(), getForgeStatus(), and updateForge() instead of duplicating the game rules in event handlers.
 const makeSwordButton = document.getElementById("make-sword");
-makeSwordButton.addEventListener("click", function (event) {
-  event.preventDefault();
+makeSwordButton.addEventListener("click", function ($event) {
+  $event.preventDefault();
   makeSword();
   console.log("Attempted to make a sword.");
 });
 
 const body = document.querySelector("body");
 const resetForgeButton = document.getElementById("reset-forge");
-resetForgeButton.addEventListener("click", function (event) {
-  event.preventDefault();
+resetForgeButton.addEventListener("click", function ($event) {
+  $event.preventDefault();
   resetForge();
   if (heatValue === 20 && swordsMade === 0) {
     actionMessage.textContent = "The forge has been reset.";
-    resetbackground = body.style.backgroundColor = "#f5f5f5"; // Reset background color to default
+    resetForge = body.style.backgroundColor = "#f5f5f5"; // Reset background color to default
+    resetForge = forgeImage.setAttribute("src", "assets/forge-cold.svg");
+    resetForge = forgeImage.setAttribute("Cold", "it is cold");
+  } else {
+    actionMessage.textContent = "The forge has been reset.";
   }
-  console.log("Attempted to reset the forge.");
+  console.log("Reset the forge.");
 });
