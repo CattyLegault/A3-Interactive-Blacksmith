@@ -80,7 +80,7 @@ function heatForge(amount) {
 
 // 7. Write makeSword(). Handle both success and insufficient heat.
 function makeSword() {
-  if (heatValue >= 70) {
+  if (heatValue >= 30) {
     swordsMade++;
     heatValue -= 30;
     actionMessage.textContent = "You made a sword!";
@@ -121,13 +121,4 @@ const resetForgeButton = document.getElementById("reset-forge");
 resetForgeButton.addEventListener("click", function ($event) {
   $event.preventDefault();
   resetForge();
-  if (heatValue === 20 && swordsMade === 0) {
-    actionMessage.textContent = "The forge has been reset.";
-    resetForge = body.style.backgroundColor = "#f5f5f5"; // Reset background color to default
-    resetForge = forgeImage.setAttribute("src", "assets/forge-cold.svg");
-    resetForge = forgeImage.setAttribute("Cold", "it is cold");
-  } else {
-    actionMessage.textContent = "The forge has been reset.";
-  }
-  console.log("Reset the forge.");
 });
