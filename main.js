@@ -123,14 +123,7 @@ resetForgeButton.addEventListener("click", function (event) {
   resetForge();
   if (heatValue === 20 && swordsMade === 0) {
     actionMessage.textContent = "The forge has been reset.";
+    resetbackground = body.style.backgroundColor = "#f5f5f5"; // Reset background color to default
   }
   console.log("Attempted to reset the forge.");
 });
-
-resetbackground = body.style.backgroundColor = "#f5f5f5"; // Reset background color to default
-function resetBackground() {
-  if (heatValue < 30) {
-    body.style.backgroundColor = "#d3d3d3"; // Cold forge background color
-    return "Cold";
-  }
-}
