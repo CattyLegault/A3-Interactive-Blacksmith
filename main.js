@@ -116,7 +116,6 @@ makeSwordButton.addEventListener("click", function ($event) {
   console.log("Attempted to make a sword.");
 });
 
-const body = document.querySelector("body");
 const resetForgeButton = document.getElementById("reset-forge");
 resetForgeButton.addEventListener("click", function ($event) {
   $event.preventDefault();
